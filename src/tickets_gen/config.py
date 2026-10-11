@@ -10,6 +10,8 @@ class Settings(BaseSettings):
     github_token: SecretStr | None = None
     github_api_url: str = "https://api.github.com"
 
+    opencode_command: str = "opencode"
+
     model_config = SettingsConfigDict(
         env_prefix="TICKETSGEN_",
         env_file=".env",
